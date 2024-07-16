@@ -1,0 +1,21 @@
+﻿@model List<avl1.Models.Message>
+
+<h2>Message Details</h2>
+
+@if (Model != null && Model.Count > 0)
+{
+    <ul>
+        @foreach (var msg in Model)
+        {
+            <li>
+                <p><strong>Name:</strong> @msg.Name</p>
+                <p><strong>Email:</strong> @msg.Email</p>
+                <p><strong>Message:</strong> @msg.Content</p>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No messages to display.</p>
+}
